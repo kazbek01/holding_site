@@ -1,0 +1,244 @@
+
+.light-theme{
+  background: white;
+  .logo{
+    color: #222222;
+    span{
+      color: rgba(34, 34, 34,0.4%);
+    }
+  }
+  .dark-img{
+    display: none;
+  }
+  .light-img{
+    display: block;
+  }
+  &.scroll-fixed{
+    .bg-bottom{
+      display: none;
+    }
+  }
+  .nav-box{
+    background: #F5F5F5;
+  }
+  .main-nav{
+    li{
+      a{
+        color: #222222;
+        &:hover,&:focus,&.active{
+          color: rgba(34,34,34,0.4);
+        }
+      }
+    }
+  }
+  .main-nav{
+    li{
+      a{
+        color: rgba(34,34,34,0.4);
+        &:hover,&:focus,&.active{
+          color: #222222;
+        }
+      }
+    }
+  }
+  .call-menu{
+    svg{
+      path{
+        stroke: #222222;
+      }
+    }
+  }
+  .dropdown-lang{
+    .dropdown-toggle{
+      color: rgba(34,34,34,0.3);
+      svg{
+        path{
+          stroke: rgba(34,34,34,0.7);
+        }
+      }
+    }
+    .dropdown-item{
+      color: rgba(34,34,34,0.3);
+      &:hover,&:focus{
+        color: rgba(34, 34, 34, 0.8);
+      }
+    }
+  }
+  .about{
+    h3{
+      color: #222222;
+    }
+    p{
+      color: #C0C0C0;
+    }
+    a{
+      color: rgba(34,34,34,0.4);
+      &:hover,&:focus{
+        color: #222222;
+      }
+    }
+  }
+
+  .team{
+    &-item{
+      h3{
+        color: #222222;
+      }
+      p{
+        color: rgba(34, 34, 34, 0.6);
+      }
+    }
+  }
+  .title{
+    color: rgba(34,34,34,0.4);
+  }
+  .circle-cover{
+    background: rgba(34, 34, 34, 0.03);
+    border: none;
+  }
+  .show-more{
+    color: #222222;
+    .circle-cover{
+      transition: all 0.2s ease;
+      transform: translateX(-5px) rotate(270deg);
+    }
+    &.active{
+      .circle-cover{
+        transform: translateX(0px) rotate(0deg);
+        border: 1px solid rgba(18, 99, 255, 0.1);
+      }
+    }
+    &:hover{
+      .circle-cover{
+        transform: translateX(0px) rotate(360deg);
+        background: rgba(18, 99, 255, 0.05);
+        border: 1px solid rgba(18, 99, 255, 0.1);
+      }
+    }
+  }
+  .close-menu{
+    svg{
+      path{
+        stroke: rgba(34,34,34,0.4);
+      }
+    }
+    &:hover,&:focus{
+      svg{
+        path{
+          stroke: rgba(34,34,34, 1);
+        }
+      }
+    }
+  }
+  body .cursor {
+    pointer-events: none;
+  }
+  .cursor {
+    border: 1px solid rgba(0, 163, 255, 1);
+  }
+  .cursor-leave{
+    opacity: 0;
+  }
+  .title-sticky{
+    color: #222222;
+    span{
+      color: rgba(34, 34, 34,0.3);
+    }
+  }
+  .holding-item{
+    h2{
+      color: rgba(34, 34, 34, 0.2);
+
+    }
+    &-caption{
+      p{
+        color: rgba(34, 34, 34, 0.6);
+      }
+    }
+    &:hover{
+      h2{
+        color: #222222;
+      }
+    }
+  }
+
+  .news{
+    background: #F5F5F5;
+    &-item{
+      h3{
+        color: #222222;
+      }
+      p{
+        color: rgba(34, 34, 34, 0.6);
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  .contact-list{
+    li{
+      a{
+        color: #000000;
+        svg{
+          path{
+            stroke: rgba(34, 34, 34, 0.8);
+          }
+        }
+      }
+      + li{
+        margin-top: 15px;
+      }
+    }
+  }
+  .grey-colored{
+    color: rgba(34, 34, 34, 0.4)!important;
+  }
+  .ins-link{
+    background: linear-gradient(206.3deg, #5B00C4 11.66%, #D00049 123.55%)!important;
+  }
+  .fb-link{
+    background: linear-gradient(0deg, #0062E0 2.92%, #19AFFF 100%)!important;
+  }
+  .tg-link{
+    background: linear-gradient(211.74deg, #34B0DF -4.14%, #1E88D3 90.25%)!important;
+  }
+  .wt-link{
+    background: linear-gradient(180deg, #00E676 0%, #1EBEA5 100%)!important;
+  }
+
+  .wrapper-relative{
+    background: rgba(255,255,255,0.9);
+  }
+  .sidebar-nav{
+    li{
+      color: rgba(34, 34, 34, 0.4);
+      a{
+        &.active,&:hover,&:focus{
+          color: black;
+        }
+      }
+    }
+  }
+  .info-title{
+    h2{
+      color: black;
+    }
+    p{
+      color: rgba(34, 34, 34, 0.5);
+    }
+    ul, ol{
+      li{
+        color: black;
+      }
+    }
+  }
+
+  .bg-dark{
+    display: none;
+  }
+  .bg-light{
+    display: block;
+  }
+}
