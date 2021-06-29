@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>bugin.holding</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+</head>
+<body>
+<div class="nav-box">
+    <button class="btn-plain close-menu">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L15 15M1 15L15 1" stroke="#FFF3F3"/>
+        </svg>
+    </button>
+    <ul class="main-nav" id="nav">
+        <li><a href="contacts.html" class="active">О компании</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="projects.html">Наши проекты</a></li>
+        <li><a href="contacts.html">Партнеры</a></li>
+        <li><a href="services.html">Услуги</a></li>
+    </ul>
+</div>
+<div class="wrapper wrapper-relative">
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="/" class="logo">
+                    bugin.<span>holding</span>
+                </a>
+                <label class="switch">
+                    <input type="checkbox"/>
+                    <canvas></canvas>
+                </label>
+                <div class="header-right">
+                    <div class="dropdown dropdown-lang">
+                        <button class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="dropdownLang">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.34661 9.47706C10.869 11.4916 19.13 11.4916 25.6511 9.47706M25.6524 20.5219C19.13 18.5074 10.869 18.5074 4.34794 20.5219M14.9995 3C21.6419 3 26.999 8.35711 26.999 14.9995C26.999 21.6419 21.6419 26.999 14.9995 26.999C8.35711 26.999 3 21.6419 3 14.9995C3 8.35711 8.35711 3 14.9995 3ZM12.5569 4.41327C8.70376 10.8463 8.70376 19.154 12.5569 25.5871C13.6849 27.471 16.3154 27.471 17.4434 25.5871C21.2966 19.154 21.2966 10.8463 17.4434 4.41327C16.3141 2.52935 13.6849 2.52935 12.5569 4.41327Z"
+                                      stroke="white" stroke-opacity="0.3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                            <span>Kz</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownLang">
+                            <li>
+                                <a class="dropdown-item" href="/ru">Ru</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/eng">Eng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-plain call-menu">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.7479 5.45788L21.7385 5.45253L8.13179 5.892L7.89365 5.45235C7.89342 5.45248 7.89319 5.4526 7.89296 5.45272C7.85557 5.47249 7.79157 5.46674 7.75238 5.40762C7.74366 5.38786 7.74111 5.36243 7.74913 5.33506C7.75795 5.30494 7.77562 5.28557 7.79393 5.27565L7.79439 5.2754C9.95281 4.10335 12.3187 3.5 14.8158 3.5C17.2854 3.5 19.4391 4.04179 21.8217 5.26789C21.8754 5.29615 21.8858 5.34981 21.8641 5.38986L21.8602 5.39706L21.8566 5.40439C21.8429 5.43166 21.8274 5.44543 21.8159 5.45261C21.8039 5.4601 21.7905 5.464 21.7758 5.464C21.7619 5.464 21.7522 5.46034 21.7479 5.45788ZM8.84013 7.83682L8.84104 7.83635C12.4659 5.96619 17.1193 5.95481 20.7551 7.82464L20.7555 7.82482C22.4838 8.71204 23.9346 9.96678 25.0765 11.5701L25.0765 11.5701L25.0794 11.5741C25.0918 11.5911 25.0989 11.6159 25.0941 11.6448C25.0894 11.6728 25.0752 11.695 25.0543 11.7095C25.0245 11.7302 24.995 11.7344 24.9713 11.7304C24.9484 11.7266 24.9272 11.7148 24.9102 11.6905L24.9103 11.6904L24.9067 11.6854C23.7814 10.11 22.3525 8.86817 20.6593 8.00278C17.0727 6.16587 12.4986 6.1653 8.92248 8.01568C7.21733 8.89343 5.78933 10.1472 4.66492 11.7214L4.65022 11.742L4.64086 11.7584C4.63541 11.7605 4.62331 11.764 4.60379 11.764C4.58658 11.764 4.56417 11.7595 4.53766 11.7429C4.51578 11.7264 4.505 11.7062 4.50135 11.6845C4.49741 11.6611 4.50146 11.632 4.52153 11.6026C5.66378 9.98795 7.11407 8.72286 8.84013 7.83682ZM12.0554 26.2335L12.0466 26.2237L12.0373 26.2144C11.0195 25.1966 10.4863 24.5612 9.70922 23.1578L9.70786 23.1554C8.92786 21.7649 8.51179 20.0517 8.51179 18.192C8.51179 14.9268 11.3127 12.224 14.8038 12.224C18.2949 12.224 21.0958 14.9268 21.0958 18.192C21.0958 18.2259 21.0835 18.2491 21.0682 18.2644C21.0529 18.2797 21.0297 18.292 20.9958 18.292C20.9619 18.292 20.9386 18.2797 20.9233 18.2644C20.908 18.2491 20.8958 18.2259 20.8958 18.192C20.8958 14.9842 18.1355 12.424 14.8038 12.424C11.4721 12.424 8.71179 14.9842 8.71179 18.192C8.71179 19.9911 9.11119 21.6741 9.89169 23.0566C10.687 24.4853 11.2466 25.1095 12.1873 26.0626C12.2264 26.1056 12.2291 26.1661 12.1955 26.2115C12.1565 26.2418 12.1245 26.248 12.1038 26.248C12.0892 26.248 12.0768 26.2451 12.0681 26.2415C12.0599 26.2381 12.0566 26.2348 12.0554 26.2335ZM17.2707 23.0477L17.2683 23.0461C15.6117 21.9232 14.6318 20.1072 14.6318 18.192C14.6318 18.1581 14.644 18.1349 14.6593 18.1196C14.6746 18.1043 14.6979 18.092 14.7318 18.092C14.7657 18.092 14.7889 18.1043 14.8042 18.1196C14.8195 18.1349 14.8318 18.1581 14.8318 18.192C14.8318 20.057 15.7841 21.8058 17.3808 22.879C18.3292 23.5198 19.4268 23.816 20.7078 23.816C21.0269 23.816 21.5358 23.7771 22.042 23.6885L22.042 23.6885L22.0468 23.6876C22.0917 23.6793 22.1472 23.7066 22.1596 23.7759L22.1602 23.779C22.1685 23.824 22.1412 23.8794 22.0719 23.8918L22.0719 23.8917L22.065 23.8931C21.4238 24.0168 20.8583 24.028 20.7078 24.028C19.3653 24.028 18.2075 23.6904 17.2707 23.0477ZM6.45163 22.6996L6.45161 22.6996L6.45312 22.7035C6.47541 22.7614 6.44309 22.8074 6.40824 22.8195L6.40022 22.8223L6.3923 22.8253C6.37084 22.8336 6.34631 22.8333 6.32113 22.8217C6.29457 22.8094 6.27985 22.7902 6.27423 22.7746L6.27427 22.7746L6.2721 22.7688C5.70424 21.2507 5.42779 19.7499 5.42779 18.192C5.42779 16.8164 5.69123 15.5832 6.19539 14.5186C7.70413 11.3542 11.0623 9.284 14.7558 9.284C19.9647 9.284 24.1558 13.2965 24.1558 18.18C24.1558 19.8265 22.7455 21.208 20.9598 21.208C19.1741 21.208 17.7638 19.8265 17.7638 18.18C17.7638 16.588 16.391 15.352 14.7678 15.352C13.1446 15.352 11.7718 16.588 11.7718 18.18C11.7718 20.3637 12.6159 22.412 14.1637 23.947L14.1641 23.9474C15.3693 25.1399 16.5383 25.8048 18.3065 26.2939L18.3065 26.294L18.3143 26.296C18.3368 26.3018 18.3545 26.3153 18.3669 26.3374C18.3802 26.3612 18.3837 26.389 18.377 26.414L18.3738 26.4258L18.3712 26.4378C18.3679 26.453 18.3593 26.468 18.3424 26.4811C18.327 26.4932 18.3115 26.4981 18.3016 26.4995L18.3 26.4993C18.2957 26.4986 18.2908 26.4977 18.2855 26.4966C18.2796 26.4953 18.2732 26.4939 18.2664 26.4922C16.4387 25.9856 15.2685 25.3185 14.0271 24.1002C12.4425 22.5264 11.5718 20.4346 11.5718 18.192C11.5718 16.5455 12.9821 15.164 14.7678 15.164C16.5535 15.164 17.9638 16.5455 17.9638 18.192C17.9638 19.784 19.3366 21.02 20.9598 21.02C22.583 21.02 23.9558 19.784 23.9558 18.192C23.9558 13.3641 19.8033 9.496 14.7558 9.496C11.1678 9.496 7.8653 11.4915 6.37292 14.6159C5.8678 15.6653 5.61579 16.8811 5.61579 18.192C5.61579 19.1678 5.70449 20.7072 6.45163 22.6996Z"
+                                  stroke="white"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <ul class="sidebar-nav touch nav-tabs nav">
+                            <li class="nav-item"><a href="#tab-mission" class="nav-link active" data-toggle="tab">Mission</a></li>
+                            <li class="nav-item"><a href="#tab-history" class="nav-link" data-toggle="tab">History</a></li>
+                            <li class="nav-item"><a href="#tab-team" class="nav-link" data-toggle="tab">Team</a></li>
+                            <li class="nav-item"><a href="#tab-products" class="nav-link" data-toggle="tab">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab-mission">
+                            <div class="info-flex align-items-end">
+                                <div class="info-left infoItem">
+                                    <div class="info-title">
+                                        <h2>To improve people’s lives by developing innovative products and services</h2>
+                                        <p>Our goal is to create a memorable user experience focused on results</p>
+                                    </div>
+                                    <div class="img-cover">
+                                        <img src="img/main/girl.png" alt="" class="img-top animated slideInUp wow">
+                                        <div class="img-blur animated fadeInUp wow delay-1s">
+                                            <img src="img/main/mobile-xs.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-right infoItem">
+                                    <div class="info-title">
+                                        <h2>We drive engagement in the
+                                            Bugin Ecosystem by
+                                            leveraging:</h2>
+                                        <ul>
+                                            <li><i class="icon i-check"></i> Seamless customer experience</li>
+                                            <li><i class="icon i-check"></i> State-of-the art technology</li>
+                                            <li><i class="icon i-check"></i> Big data analytics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-center">
+                                <div class="infoItem align-items-start">
+                                    <div class="info-title">
+                                        <h2>
+                                            We operate the largest Edutech Ecosystem in Kazakhstan with the mission to improve
+                                            people’s lives by developing innovative products and services that transform the way
+                                            education.
+                                        </h2>
+                                        <p>
+                                            We are driving customer engagement by crafting seamless customer experience
+                                            leveraging state-of-the-art technology and proprietary big data analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <img src="img/main/tablet.png" alt="" class="img-lg animated slideInUp wow">
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-end">
+                                <div class="info-left infoItem">
+                                    <div class="info-title">
+                                        <h2>To improve people’s lives by developing innovative products and services</h2>
+                                        <p>Our goal is to create a memorable user experience focused on results</p>
+                                    </div>
+                                    <div class="img-cover">
+                                        <img src="img/main/girl.png" alt="" class="img-top animated slideInUp wow">
+                                        <div class="img-blur animated fadeInUp wow">
+                                            <img src="img/main/mobile-xs.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-right infoItem">
+                                    <div class="info-title">
+                                        <h2>We drive engagement in the
+                                            Bugin Ecosystem by
+                                            leveraging:</h2>
+                                        <ul>
+                                            <li><i class="icon i-check"></i> Seamless customer experience</li>
+                                            <li><i class="icon i-check"></i> State-of-the art technology</li>
+                                            <li><i class="icon i-check"></i> Big data analytics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-center">
+                                <div class="infoItem align-items-start">
+                                    <div class="info-title">
+                                        <h2>
+                                            We operate the largest Edutech Ecosystem in Kazakhstan with the mission to improve
+                                            people’s lives by developing innovative products and services that transform the way
+                                            education.
+                                        </h2>
+                                        <p>
+                                            We are driving customer engagement by crafting seamless customer experience
+                                            leveraging state-of-the-art technology and proprietary big data analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <img src="img/main/tablet.png" alt="" class="img-lg animated slideInUp wow">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-history">
+                            <h2 class="title">History</h2>
+                            <div class="info-flex align-items-end">
+                                <div class="info-left infoItem">
+                                    <div class="info-title">
+                                        <h2>To improve people’s lives by developing innovative products and services</h2>
+                                        <p>Our goal is to create a memorable user experience focused on results</p>
+                                    </div>
+                                    <div class="img-cover">
+                                        <img src="img/main/girl.png" alt="" class="img-top animated slideInUp wow">
+                                        <div class="img-blur animated fadeInUp wow delay-1s">
+                                            <img src="img/main/mobile-xs.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-right infoItem">
+                                    <div class="info-title">
+                                        <h2>We drive engagement in the
+                                            Bugin Ecosystem by
+                                            leveraging:</h2>
+                                        <ul>
+                                            <li><i class="icon i-check"></i> Seamless customer experience</li>
+                                            <li><i class="icon i-check"></i> State-of-the art technology</li>
+                                            <li><i class="icon i-check"></i> Big data analytics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-center">
+                                <div class="infoItem align-items-start">
+                                    <div class="info-title">
+                                        <h2>
+                                            We operate the largest Edutech Ecosystem in Kazakhstan with the mission to improve
+                                            people’s lives by developing innovative products and services that transform the way
+                                            education.
+                                        </h2>
+                                        <p>
+                                            We are driving customer engagement by crafting seamless customer experience
+                                            leveraging state-of-the-art technology and proprietary big data analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <img src="img/main/tablet.png" alt="" class="img-lg animated slideInUp wow">
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-end">
+                                <div class="info-left infoItem">
+                                    <div class="info-title">
+                                        <h2>To improve people’s lives by developing innovative products and services</h2>
+                                        <p>Our goal is to create a memorable user experience focused on results</p>
+                                    </div>
+                                    <div class="img-cover">
+                                        <img src="img/main/girl.png" alt="" class="img-top animated slideInUp wow">
+                                        <div class="img-blur animated fadeInUp wow">
+                                            <img src="img/main/mobile-xs.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-right infoItem">
+                                    <div class="info-title">
+                                        <h2>We drive engagement in the
+                                            Bugin Ecosystem by
+                                            leveraging:</h2>
+                                        <ul>
+                                            <li><i class="icon i-check"></i> Seamless customer experience</li>
+                                            <li><i class="icon i-check"></i> State-of-the art technology</li>
+                                            <li><i class="icon i-check"></i> Big data analytics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-center">
+                                <div class="infoItem align-items-start">
+                                    <div class="info-title">
+                                        <h2>
+                                            We operate the largest Edutech Ecosystem in Kazakhstan with the mission to improve
+                                            people’s lives by developing innovative products and services that transform the way
+                                            education.
+                                        </h2>
+                                        <p>
+                                            We are driving customer engagement by crafting seamless customer experience
+                                            leveraging state-of-the-art technology and proprietary big data analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <img src="img/main/tablet.png" alt="" class="img-lg animated slideInUp wow">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-team">
+                            <div class="team">
+                                    <h2 class="title">Leadership</h2>
+                                    <div class="row row-eq-height">
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team3.png" alt="">
+                                                <h3>Aibek Kuatbayev</h3>
+                                                <p>Founder</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team2.png" alt="">
+                                                <h3>Arman Abdiyev</h3>
+                                                <p>Еxecutive Director</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team1.png" alt="">
+                                                <h3>Zhuldyz Ybytayeva</h3>
+                                                <p>Deputy CEO</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team3.png" alt="">
+                                                <h3>Nurbakhyt Zhulduzbaiuly</h3>
+                                                <p>Founder</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team2.png" alt="">
+                                                <h3>Nargiz Kara</h3>
+                                                <p>Еxecutive Director</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team1.png" alt="">
+                                                <h3>Maksat Batyrqul</h3>
+                                                <p>Deputy CEO</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team3.png" alt="">
+                                                <h3>Askar Maksat</h3>
+                                                <p>Founder</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team2.png" alt="">
+                                                <h3>Turan Mural</h3>
+                                                <p>Еxecutive Director</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-height">
+                                            <div class="team-item">
+                                                <img src="img/main/team1.png" alt="">
+                                                <h3>Parassat Tanenov</h3>
+                                                <p>Deputy CEO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-products">
+                            <h2 class="title">Products</h2>
+                            <div class="info-flex align-items-end">
+                                <div class="info-left infoItem">
+                                    <div class="info-title">
+                                        <h2>To improve people’s lives by developing innovative products and services</h2>
+                                        <p>Our goal is to create a memorable user experience focused on results</p>
+                                    </div>
+                                    <div class="img-cover">
+                                        <img src="img/main/girl.png" alt="" class="img-top animated slideInUp wow">
+                                        <div class="img-blur animated fadeInUp wow delay-1s">
+                                            <img src="img/main/mobile-xs.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-right infoItem">
+                                    <div class="info-title">
+                                        <h2>We drive engagement in the
+                                            Bugin Ecosystem by
+                                            leveraging:</h2>
+                                        <ul>
+                                            <li><i class="icon i-check"></i> Seamless customer experience</li>
+                                            <li><i class="icon i-check"></i> State-of-the art technology</li>
+                                            <li><i class="icon i-check"></i> Big data analytics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-center">
+                                <div class="infoItem align-items-start">
+                                    <div class="info-title">
+                                        <h2>
+                                            We operate the largest Edutech Ecosystem in Kazakhstan with the mission to improve
+                                            people’s lives by developing innovative products and services that transform the way
+                                            education.
+                                        </h2>
+                                        <p>
+                                            We are driving customer engagement by crafting seamless customer experience
+                                            leveraging state-of-the-art technology and proprietary big data analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <img src="img/main/tablet.png" alt="" class="img-lg animated slideInUp wow">
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-end">
+                                <div class="info-left infoItem">
+                                    <div class="info-title">
+                                        <h2>To improve people’s lives by developing innovative products and services</h2>
+                                        <p>Our goal is to create a memorable user experience focused on results</p>
+                                    </div>
+                                    <div class="img-cover">
+                                        <img src="img/main/girl.png" alt="" class="img-top animated slideInUp wow">
+                                        <div class="img-blur animated fadeInUp wow">
+                                            <img src="img/main/mobile-xs.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-right infoItem">
+                                    <div class="info-title">
+                                        <h2>We drive engagement in the
+                                            Bugin Ecosystem by
+                                            leveraging:</h2>
+                                        <ul>
+                                            <li><i class="icon i-check"></i> Seamless customer experience</li>
+                                            <li><i class="icon i-check"></i> State-of-the art technology</li>
+                                            <li><i class="icon i-check"></i> Big data analytics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-flex align-items-center">
+                                <div class="infoItem align-items-start">
+                                    <div class="info-title">
+                                        <h2>
+                                            We operate the largest Edutech Ecosystem in Kazakhstan with the mission to improve
+                                            people’s lives by developing innovative products and services that transform the way
+                                            education.
+                                        </h2>
+                                        <p>
+                                            We are driving customer engagement by crafting seamless customer experience
+                                            leveraging state-of-the-art technology and proprietary big data analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <img src="img/main/tablet.png" alt="" class="img-lg animated slideInUp wow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <h2 class="title">Contacts</h2>
+            <div class="row align-items-end">
+                <div class="col-lg-7 col-md-6">
+                    <ul class="contact-list">
+                        <li>
+                            <a href="#">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26.0001 22.3334L22.3334 6.44446M4 22.3334L7.66669 6.44446M15.0001 4V6.44446M15.0001 11.3334V13.7778M15.5061 18.9503L19.7753 25.0358C20.0931 25.4892 19.6922 26.0979 19.1471 25.9867L15.0013 25.1421L10.8506 25.9867C10.3067 26.0967 9.90703 25.4905 10.2248 25.0382L14.4953 18.9503C14.7409 18.6007 15.2604 18.6007 15.5061 18.9503Z"
+                                          stroke="white" stroke-opacity="0.2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                                <p>Keremet-1 k6/7, <span class="grey-colored">Almaty, Kazakhstan</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:8 800 080 09 80">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.3333 7H16.6667M20.3333 27H9.66667C8.19333 27 7 25.8067 7 24.3333V5.66667C7 4.19333 8.19333 3 9.66667 3H20.3333C21.8067 3 23 4.19333 23 5.66667V24.3333C23 25.8067 21.8067 27 20.3333 27ZM14.9987 22C14.8147 22 14.6653 22.1493 14.6667 22.3333C14.6667 22.5173 14.816 22.6667 15 22.6667C15.184 22.6667 15.3333 22.5173 15.3333 22.3333C15.3333 22.1493 15.184 22 14.9987 22Z"
+                                          stroke="white" stroke-opacity="0.2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                                <span>8 800 080 09 80</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:holding@bugin.kz">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.1111 26H15C12.8244 26 10.6977 25.3549 8.88873 24.1462C7.07979 22.9375 5.66989 21.2195 4.83733 19.2095C4.00477 17.1995 3.78693 14.9878 4.21137 12.854C4.6358 10.7202 5.68345 8.76021 7.22183 7.22183C8.76021 5.68345 10.7202 4.6358 12.854 4.21137C14.9878 3.78693 17.1995 4.00477 19.2095 4.83733C21.2195 5.66989 22.9375 7.07979 24.1462 8.88873C25.3549 10.6977 26 12.8244 26 15V16.8333C26 17.6437 25.6781 18.4209 25.105 18.9939C24.532 19.567 23.7548 19.8889 22.9444 19.8889C22.1341 19.8889 21.3569 19.567 20.7838 18.9939C20.2108 18.4209 19.8889 17.6437 19.8889 16.8333V15C19.8889 13.7034 19.3738 12.4599 18.457 11.543C17.5401 10.6262 16.2966 10.1111 15 10.1111V10.1111C14.0331 10.1111 13.0879 10.3978 12.2839 10.935C11.4799 11.4722 10.8533 12.2358 10.4833 13.1291C10.1132 14.0224 10.0164 15.0054 10.2051 15.9538C10.3937 16.9021 10.8593 17.7732 11.543 18.457C12.2268 19.1407 13.0979 19.6063 14.0462 19.795C14.9946 19.9836 15.9776 19.8868 16.8709 19.5167C17.7642 19.1467 18.5278 18.5201 19.065 17.7161C19.6022 16.9121 19.8889 15.9669 19.8889 15"
+                                          stroke="white" stroke-opacity="0.2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                                <span>holding@bugin.kz</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="ins-link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6602 5.3335H27.3415C31.3863 5.3335 34.6667 8.61231 34.6667 12.6603V27.3416C34.6667 31.3864 31.3879 34.6668 27.3399 34.6668H12.6602C8.61382 34.6668 5.33337 31.388 5.33337 27.34V12.6603C5.33337 8.61394 8.61219 5.3335 12.6602 5.3335Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M28.0651 11.3843C27.762 11.3859 27.5159 11.632 27.5159 11.9351C27.5159 12.2382 27.7636 12.4843 28.0667 12.4843C28.3698 12.4843 28.6159 12.2382 28.6159 11.9351C28.6175 11.6304 28.3698 11.3843 28.0651 11.3843Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1484 15.8518C26.4395 18.1429 26.4395 21.8575 24.1484 24.1485C21.8573 26.4396 18.1428 26.4396 15.8517 24.1485C13.5606 21.8575 13.5606 18.1429 15.8517 15.8518C18.1428 13.5607 21.8573 13.5607 24.1484 15.8518Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="fb-link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.5334 21.4668H27.3334M27.3334 14.1335H25.7934C23.4043 14.1335 21.4667 16.0711 21.4667 18.4602V34.6668M12.6667 5.3335H27.3399C31.3863 5.3335 34.6667 8.61394 34.6667 12.6603V27.3416C34.6667 31.3864 31.3863 34.6668 27.3399 34.6668H12.6602C8.61382 34.6668 5.33337 31.3864 5.33337 27.34V12.6668C5.33337 8.6172 8.61708 5.3335 12.6667 5.3335Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tg-link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9261 27.2238L17.342 30.7063C16.7206 31.3095 15.681 31.0426 15.4293 30.214L13.0411 22.3616M24.9338 16.8597C24.9338 16.8597 20.4402 20.909 18.1352 22.9873C17.4462 23.6079 17.5034 24.7 18.2498 25.2495L27.5841 32.1364C28.5023 32.8141 29.8144 32.3166 30.0522 31.2003L34.6361 9.62434C34.8582 8.58082 33.8325 7.70891 32.8362 8.09199L5.90752 18.4648C5.11433 18.7699 5.15251 19.9018 5.96306 20.1549L13.0393 22.3598" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="wt-link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.4596 23.5219C19.7513 26.801 23.9207 28.8892 26.4016 26.4307L27.003 25.832C27.8053 25.0347 27.6931 23.7137 26.7617 23.0699C26.1754 22.663 25.5456 22.226 24.8487 21.7389C24.1284 21.2352 23.1401 21.3136 22.5153 21.9308L21.8352 22.6029C20.9926 22.0709 20.1583 21.3887 19.3844 20.6181L19.3811 20.6148C18.6072 19.8442 17.922 19.0136 17.3877 18.1746L18.0627 17.4975C18.6842 16.8754 18.7613 15.8913 18.2554 15.1741C17.7646 14.4803 17.3257 13.8531 16.9186 13.2694C16.272 12.3437 14.9453 12.2319 14.1446 13.0292L13.5432 13.628C11.0741 16.0981 13.1713 20.2478 16.463 23.5269M30.3934 9.59665C27.6362 6.84962 23.9693 5.33516 20.0629 5.3335C12.0105 5.3335 5.45901 11.8533 5.45733 19.8676C5.45398 22.4178 6.12571 24.9246 7.40552 27.1346L5.33337 34.6668L13.0759 32.6453C15.2184 33.8062 17.6172 34.415 20.0562 34.415H20.0629C28.1119 34.415 34.6634 27.8935 34.6667 19.8792C34.6684 15.9964 33.1507 12.3453 30.3934 9.59665Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--<div class="video-bg">-->
+<!--    <video data-play-on-scroll="0" muted="muted" playsinline="playsinline" autoplay loop>-->
+<!--        <source src="video/video-cover.mp4" type="video/mp4">-->
+<!--    </video>-->
+<!--</div>-->
+<img src="img/main/illustration-dark.svg" alt="" class="bg-bottom dark-img">
+<img src="img/main/illustration-light.svg" alt="" class="bg-bottom light-img">
+<div class="overlay"></div>
+<div class="cursor"></div>
+<script src="js/wow.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/three.min.js"></script>
+<script type="text/javascript" src="js/gsap.min.js"></script>
+<script type="text/javascript" src="js/3d-switch.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+
+    $('.switch').click(function () {
+        // $(document.body).toggleClass('light-theme');
+        if ($('.switch input').is(':checked')) {
+            $('body').addClass('light-theme');
+        } else {
+            $('body').removeClass('light-theme');
+        }
+    });
+
+
+</script>
+</body>
+</html>

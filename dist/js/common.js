@@ -10,12 +10,21 @@ $(document).ready(function () {
         $('body').removeClass('scroll-fixed');
     });
 
+    $('.call-modal').click(function () {
+        $('.modal-plain').addClass('modal-show');
+        $('.wrapper').addClass('scaled');
+        $('body').addClass('scroll-fixed');
+    });
 
     $('.close-modal').click(function () {
         $('.modal-plain').removeClass('modal-show');
-        $('.overlay').removeClass('overlay-showed');
+        $('.wrapper').removeClass('scaled');
         $('body').removeClass('scroll-locked');
     });
+
+
+
+
 
     // Variables
     const $cursor = $('.cursor');
@@ -41,6 +50,11 @@ $(document).ready(function () {
         $('.cursor').toggleClass('cursor-leave');
     });
 
+    var wow = new WOW({
+        animateClass: 'animated',
+        offset: 200
+    });
+    wow.init();
 });
 
 

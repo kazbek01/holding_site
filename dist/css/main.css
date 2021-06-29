@@ -965,6 +965,10 @@ body .cursor {
   top: 50px;
 }
 
+.sidebar-nav {
+  border-bottom: none;
+}
+
 .sidebar-nav li {
   width: 100%;
   font-family: "SF Pro Display Thin";
@@ -974,6 +978,7 @@ body .cursor {
 }
 
 .sidebar-nav li a {
+  border: none;
   color: inherit;
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
@@ -986,6 +991,24 @@ body .cursor {
 
 .sidebar-nav li + li {
   margin-top: 20px;
+}
+
+.sidebar-nav .nav-item.show .nav-link, .sidebar-nav .nav-link.active {
+  color: white;
+  border: none;
+  background: transparent;
+}
+
+.sidebar-nav .nav-link:focus, .sidebar-nav .nav-link:hover {
+  border-color: transparent;
+}
+
+.tab-pane .team {
+  padding-top: 0;
+}
+
+.tab-pane .title {
+  margin-bottom: 30px;
 }
 
 .info-title {
