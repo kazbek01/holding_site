@@ -39,7 +39,7 @@
         <div class="market-body">
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -48,7 +48,7 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -57,7 +57,7 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -66,7 +66,7 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -75,7 +75,7 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -84,7 +84,7 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -93,7 +93,7 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -102,7 +102,25 @@
             </div>
             <div class="market-item">
                 <div class="market-item-img">
-                    <img>
+                    <img src="">
+                </div>
+                <div class="market-item-caption">
+                    <p>Heading</p>
+                    <span>180 ₸</span>
+                </div>
+            </div>
+            <div class="market-item">
+                <div class="market-item-img">
+                    <img src="">
+                </div>
+                <div class="market-item-caption">
+                    <p>Heading</p>
+                    <span>180 ₸</span>
+                </div>
+            </div>
+            <div class="market-item">
+                <div class="market-item-img">
+                    <img src="">
                 </div>
                 <div class="market-item-caption">
                     <p>Heading</p>
@@ -198,6 +216,10 @@
         }
     })
 
+    //market-item-img
+    $(document).ready(function (){
+        $('img[src!=""]').parents('.market-item-img').css('background', '#f5f5f5');
+    })
 
 
 </script>
